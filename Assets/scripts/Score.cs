@@ -18,3 +18,4 @@ public class Score : MonoBehaviour
         Debug.Log(myScore);
     }
 }
+//CREER GAME SCENE MANAGER POUR LE RESTART ETC...//
