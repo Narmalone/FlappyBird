@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public void Start()
     {
        GameOverPannel.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void TriggerGameOver()

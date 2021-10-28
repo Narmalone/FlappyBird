@@ -8,16 +8,25 @@ public class bird : MonoBehaviour
     public float maxSpeedY_Down;
     public float thrust_Force;
     public float fallSpeedY;
-    public float SpeedX;
-
+    public float fallSpeedMax;
+    public float goUp;
 
     private void Update()
     {
         Rigidbody2D _rigid = GetComponent<Rigidbody2D>();
+        transform.Rotate(0f, 0f, fallSpeedY * Time.deltaTime);
+
+
+        if (fallSpeedY>fallSpeedMax)
+        {
+            fallSpeedY = fallSpeedMax;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.Rotate(0f, 0f, 700f);
+            transform.Rotate(0f, 0f, goUp);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, fallSpeedY, Time.deltaTime);
+
 
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * thrust_Force, ForceMode2D.Force);
         }
@@ -25,16 +34,15 @@ public class bird : MonoBehaviour
         if (_rigid.velocity.y > maxSpeedY_Up) 
         {
             _rigid.velocity = new Vector2(_rigid.velocity.x, maxSpeedY_Up);
+
         }
 
         if (_rigid.velocity.y < maxSpeedY_Down)
         {
-            transform.Rotate(0f, 0f, -7f);
             _rigid.velocity = new Vector2(_rigid.velocity.x, maxSpeedY_Down);
 
         }
 
-        //transform.rotation = Quaternion.Slerp(transform.rotation, fallSpeedY, Time.deltaTime * smooth);
 
 
 

@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-
-
     public int myScore;
 
     public void addScore() 
@@ -15,7 +13,6 @@ public class Score : MonoBehaviour
         myScore++;
         GetComponent<TextMeshProUGUI>().text = myScore.ToString();
 
-        Debug.Log(myScore);
     }
 }
 //CREER GAME SCENE MANAGER POUR LE RESTART ETC...//

@@ -6,10 +6,10 @@ public class checkpoints : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D p_collision)
     {
-        if(p_collision.GetComponent<bird>()!= null)
+
+        if (p_collision.GetComponent<bird>()!= null)
         {
             FindObjectOfType<Score>().addScore();
-            Debug.Log("score");
         }
     }
 }
