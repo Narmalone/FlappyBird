@@ -10,7 +10,7 @@ public class killer : MonoBehaviour
         {
             p_collision.gameObject.SetActive(false);
 
-            FindObjectOfType<UIManager>().TriggerGameOver();
+            FindObjectOfType<UIManager>().OnDeath();
 
         }
     }

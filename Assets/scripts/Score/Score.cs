@@ -7,6 +7,11 @@ public class Score : MonoBehaviour
 {
     public int myScore;
 
+    private void Start()
+    {
+        myScore = 0;
+    }
+
     public void addScore() 
     {
 

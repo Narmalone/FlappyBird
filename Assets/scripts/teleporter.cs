@@ -10,6 +10,7 @@ public class teleporter : MonoBehaviour
         if(p_collision.GetComponent<Pipe>()!= null)
         {
             p_collision.transform.position = new Vector3(RangePipes, p_collision.transform.position.y, 0f);
+            print("teleporter le pipe");
         }
     }
 }

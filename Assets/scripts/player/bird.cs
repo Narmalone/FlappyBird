@@ -24,7 +24,7 @@ public class bird : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.Rotate(0f, 0f, goUp);
+            //transform.Rotate(0f, 0f, goUp);
             //transform.rotation = Quaternion.Slerp(transform.rotation, fallSpeedY, Time.deltaTime);
 
 
