@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class killer : MonoBehaviour
 {
+
+    //si col bird et decor => Ui death
     private void OnTriggerEnter2D(Collider2D p_collision)
     {
         if(p_collision.GetComponent<bird>()!= null)

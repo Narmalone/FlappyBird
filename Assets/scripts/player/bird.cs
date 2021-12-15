@@ -13,6 +13,7 @@ public class bird : MonoBehaviour
 
     private void Update()
     {
+        //assisgn Rbody
         Rigidbody2D _rigid = GetComponent<Rigidbody2D>();
         transform.Rotate(0f, 0f, fallSpeedY * Time.deltaTime);
 
@@ -31,6 +32,8 @@ public class bird : MonoBehaviour
             GetComponent<Rigidbody2D>().AddForce(Vector2.up * thrust_Force, ForceMode2D.Force);
         }
 
+        //secu velocity
+
         if (_rigid.velocity.y > maxSpeedY_Up) 
         {
             _rigid.velocity = new Vector2(_rigid.velocity.x, maxSpeedY_Up);
@@ -48,5 +51,3 @@ public class bird : MonoBehaviour
 
     }
 }
-
-//OBSCURCIR LECRAN ET METTRE UN GAME OVER, CREER UNE UI MANAGER

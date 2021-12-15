@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
 
     public bool isStart;
+    //quand le jeu se lance
     private void Start()
     {
         GameStartPannel.SetActive(true);
@@ -22,7 +23,7 @@ public class UIManager : MonoBehaviour
         GameOverPannel.SetActive(false);
     }
 
-
+    //quand au menu il appuie sur jouer
     public void OnStart()
     {
         isStart = false;
@@ -30,6 +31,7 @@ public class UIManager : MonoBehaviour
         GameUiPannel.SetActive(true);
     }
 
+    //lorsque le joueur meurt
     public void OnDeath()
     {
         isStart = true;
@@ -37,6 +39,7 @@ public class UIManager : MonoBehaviour
         GameOverPannel.SetActive(true);
     }
 
+    //si le joueur relance la partie
     public void OnRestart()
     {
         isStart = false;
@@ -45,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if(isStart == true)
+        if (isStart == true)
         {
             Time.timeScale = 0;
         }
